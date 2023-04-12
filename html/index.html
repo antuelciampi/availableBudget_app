@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/assets/Ff7HeQhXwAMxcq0.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/77605dc75c.js" crossorigin="anonymous"></script>
+    <title>Presupuesto/Gasto</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+                <div class="total-amount-container">
+                    <h3>Presupuesto</h3>
+                    <p class="hide error" id="budget-error">
+                        El valor no puede estar vacío o ser negativo
+                    </p>
+                    <input type="number" id="total-amount" placeholder="Ingrese el valor total">
+                    <button class="submit" id="total-amount-button">
+                        Colocar presupuesto
+                    </button>
+                </div>
+
+                <div class="user-amount-container">
+                    <h3>Gastos</h3>
+                    <p class="hide error" id="product-title-error">
+                        No puede haber valores vacíos
+                    </p>
+                    <input type="text" class="product-title" id="product-title" placeholder="Ingresar título del producto">
+                    <input type="number" id="user-amount" placeholder="Ingresar costo del producto">
+                    <button class="submit" id="check-amount">Ver total</button>
+                </div>
+            </div>
+
+            <div class="output-container flex-space">
+                <div>
+                    <p>Presupuesto total</p>
+                    <span id="amount">
+                        0
+                    </span>
+                </div>
+                <div>
+                    <p>Gastos</p>
+                    <span id="valor-gastos">
+                        0
+                    </span>
+                </div>
+                <div>
+                    <p>Balance</p>
+                    <span id="balance-total">
+                        0
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <h3>Lista de gastos</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+
+    </div>
+</body>
+<script src="/js/index.js"></script>
+</html>
